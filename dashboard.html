@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .navbar {
+            position: center;
+            background-color: aliceblue;
+            border-color: rgb(210, 219, 227);
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            margin: 12px 13px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: black;
+            padding: 4px 4px;
+
+        }
+
+
+
+
+
+
+
+        .dashboard {
+            width: 900px;
+            border-color: rgb(223, 235, 246);
+            border-radius: 4px;
+            margin: 2px 6px 2px 6px;
+            flex-wrap: wrap;
+        }
+
+        .profile {
+            display: flex;
+
+        }
+
+
+        .btn:hover {
+            background-color: rgb(106, 126, 143);
+        }
+
+        .btn {
+            background-color: rgb(211, 218, 227);
+            padding: 4px;
+            margin: 4px 4px 4px 4px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .item {
+            background-color: aliceblue;
+            border-color: rgb(210, 219, 227);
+            border-radius: 4px;
+            padding: 14px;
+            margin: 12px;
+
+
+
+
+        }
+
+        #testuser {
+            float: left;
+
+            box-sizing: border-box;
+            width: 340 px;
+            clear: both;
+
+
+        }
+
+        #solvedprob {
+            float: left;
+            box-sizing: border-box;
+            width: 48%;
+
+        }
+
+        #badges {
+            float: left;
+            box-sizing: border-box;
+            width: 20%;
+
+        }
+
+        #submission {
+            float: left;
+            box-sizing: border-box;
+            width: 70%;
+
+        }
+
+        .info {
+            display: flex;
+        }
+
+        .im {
+            margin: 4px;
+            padding: 4px;
+
+        }
+
+        .pa {
+            font-size: 13px;
+            margin: 4px;
+            padding: 4px;
+        }
+
+        .community {
+            display: flex;
+
+        }
+
+        .ima {
+
+            margin: 4px;
+            padding: 4px;
+        }
+
+        .pa2 {
+
+            font-size: 13px;
+            margin: 4px;
+
+            padding: 4px;
+        }
+
+        .buttonall {
+            background-color: rgb(211, 218, 227);
+            border-radius: 8px;
+            border: none;
+
+        }
+
+        span.no1 {
+            font-weight: bold;
+        }
+
+        .noprob {
+            margin: 4px;
+
+            float: right;
+        }
+
+        .skills {
+            margin: 8px;
+            padding: 4px;
+        }
+
+        .noeffbtn {
+            border: none;
+            background-color: rgb(220, 230, 239);
+            align-items: center;
+        }
+
+        .solp {
+
+            display: flex;
+
+        }
+
+        .level {
+            margin: 4px;
+        }
+
+        .score {
+            margin: 24px;
+        }
+
+        .beat {
+            margin: 24px;
+        }
+
+        #icon {
+            display: flex;
+            margin: 2px;
+        }
+
+        #ac {
+            margin: 4px;
+        }
+
+        #sol {
+            margin: 4px;
+        }
+
+        #dis {
+
+            margin: 4px;
+        }
+
+        #visub {
+
+            margin: 6px;
+        }
+
+        .sub {
+            background-color: rgb(231 238 245);
+            border-color: rgb(210, 219, 227);
+            border-radius: 4px;
+            padding: 14px;
+            margin: 0px 19px 0px 19px;
+        }
+        #icon{
+            display: flex;
+        }
+       
+        .ques{
+            display: flex;
+            justify-content: space-between;
+           
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <ul class="navbar">
+            <li><a href="#"> <img src="https://cdn.iconscout.com/icon/free/png-256/leetcode-3628885-3030025.png"
+                        alt="error loading" width="40" height="40"> </a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a hre="#">Problems</a></li>
+            <li><a href="#">Contest</a></li>
+            <li><a href="#">Discuss</a></li>
+            <li><a href="#"><label for="Interview">Interview</label>
+                    <select name="user" id="Interview"></select>
+                </a></li>
+            <li><a style="color:goldenrod;" href="#"><label for="Store">Store </label><select name="wish"
+                        id="Store"></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li><a style="color:goldenrod;" href="#"><button class="prem">Premium</button></a></li>
+            <li><a href="#"> <img
+                        src="https://previews.123rf.com/images/illizium/illizium1903/illizium190300113/119765682-notification-icon-vector-bell-icons-in-line.jpg"
+                        alt="error loading" width="30" height="30"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="https://www.linkedin.com/in/srishti-pandey-981b86200" target="blank"><img
+                        src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                        alt="error loading" width="30" height="30"></a></li>
+
+        </ul>
+
+
+    </header>
+    <div class="dashboard">
+        <!--dashboard start-->
+        <!-- test user -->
+        <div id="testuser" class="item">
+            <div class="profile">
+                <a href="https://www.linkedin.com/in/srishti-pandey-981b86200" target="blank"> <img
+                        src="https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"
+                        alt="error loading" width="100" height="100"> </a>
+                <div class="test1">
+                    <h4 class="para">TEST user</h4>
+                    <p id="testuserpara" class="para">test user007</p>
+                    <p id="testuserpara2" class="para">Rank 392,283</p>
+                </div>
+            </div>
+            <button class="btn"> Edit Profile</button>
+            <!-- info -->
+            <div class="info">
+                <div class="im">
+                    <br>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0hQ1XrZDUmWJEyYvex3xkZFrKbzrLCKNvleJx9D0&s"
+                        alt="location" width="20" height="20">
+
+                    <br> <img
+                        src="https://media.istockphoto.com/vectors/education-line-icon-vector-id1077510112?s=170667a"
+                        alt="college" width="20" height="20">
+
+
+                    <br> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" width="20"
+                        height="20">
+
+
+                    <br> <img
+                        src="https://www.citypng.com/public/uploads/preview/hd-grey-linkedin-in-icon-text-symbol-sign-png-31623974541hv8yrvid5u.png"
+                        alt="linkedin" width="20" height="20">
+
+                </div>
+
+                <div class="pa">
+                    <p>India</p>
+                    <p>MNNIT Allahabad</p>
+                    <p>TestUser</p>
+                    <p>test-user</p>
+                </div>
+            </div>
+            <hr>
+            <!-- community stats -->
+            <h4>Community Stats</h4>
+            <div class="community">
+                <div class="ima">
+                    <br>
+                    <img src="https://icons-for-free.com/iconfiles/png/512/sight+view+icon-1320166581980344025.png"
+                        alt="view" width="20" height="20">
+
+                    <br> <img src="https://www.pngfind.com/pngs/m/19-198976_1388-x-1050-10-0-check-mark-icon.png"
+                        alt="solution" width="20" height="20">
+
+
+                    <br> <img
+                        src="https://p.kindpng.com/picc/s/150-1509157_icons-transparent-imessage-cool-messages-icon-transparent-hd.png"
+                        alt="discussion" width="20" height="20">
+
+
+                    <br> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDSANqUh0odmpChZVPLuROXhpiMRJ_yVbISw&usqp=CAU"
+                        alt="Reputation" width="20" height="20">
+
+                </div>
+
+                <div class="pa2">
+                    <p>Views 0 <br> Last Week 0</p>
+                    <p>Solution<br> 0 Last Week 0</p>
+                    <p>Discuss 0 <br> Last Week 0</p>
+                    <p>Reputation 0<br> Last week 0</p>
+                </div>
+            </div>
+            <hr>
+            <!-- languages -->
+            <h4>Languages</h4>
+            <button class="buttonall">C++</button>
+            <p class="noprob"> <span class="no1">138</span> Problems Solved</p>
+            <hr>
+
+            <!-- skills -->
+            <h4>Skills</h4>
+
+            <ul type="disk">
+
+                <li>Intermidiate</li>
+                <div class="skills">
+                    <button class="buttonall">Hash Table</button>*19
+                    <button class="buttonall">Binary Search</button>*18
+                    <br>
+                    <br>
+                    <button class="buttonall">Depth-First Search</button>*18
+                    <br>
+                    <br>
+                    <button class="noeffbtn">Show more</button>
+                    <br>
+                    <br>
+                </div>
+                <li>Fundamental</li>
+                <div class="skills">
+                    <button class="buttonall">Array</button>*79
+                    <button class="buttonall">String</button>*27
+                    <br>
+                    <br>
+                    <button class="buttonall">Two-Pointers</button>*22
+                    <br>
+                    <br>
+                    <button class="noeffbtn">Show more</button>
+                    <br>
+                    <br>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+    <!-- solved problems -->
+    <div id="solvedprob" class="item">
+        <p>Solved Problems </p>
+        <div class="solp">
+            <div class="level">
+                <p>Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p><img src="https://static.thenounproject.com/png/1029949-200.png" alt="low" width="100" height="30">
+                </p>
+                <p>Medium&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p> <img src="https://static.thenounproject.com/png/302839-200.png" alt="low" width="100" height="30">
+                </p>
+                <p>Hard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p> <img src="https://static.thenounproject.com/png/1029949-200.png" alt="low" width="100" height="30">
+                </p>
+
+            </div>
+            <div clas="score">
+                <p><span class="no1">21</span>/592&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <br>
+                <br>
+
+
+
+                <p><span class="no1">89</span>/1285&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <br>
+                <br>
+
+
+
+
+                <p><span class="no1">25</span>/530&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+            </div>
+            <div clas="beat">
+                <p>Beats 52.8%</p>
+
+                <br>
+                <br>
+
+                <p>Beats 84.0%</p>
+
+                <br>
+                <br>
+
+
+                <p>Beats 81.7%</p>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div id="badges" class="item">
+
+        <p> Badges</p>
+        <p><span class="no1">0</span></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Locked Badge</p>
+        <p><span class="no1">Sep LeetCoding Challenge</span></p>
+
+
+    </div>
+    <div id="submission" class="item">
+
+        <div id="icon">
+            <p id="ac">
+                <button class="buttonall"> <img
+                        src="https://image.shutterstock.com/image-vector/checklist-icon-flat-style-isolated-260nw-1524068858.jpg"
+                        alt="AC" width="20" height="20"> Recent AC</button>
+            </p>
+            <p id="sol">
+                <img src="https://thumbs.dreamstime.com/b/check-icon-checkmark-vector-approved-symbol-ok-button-sign-tick-checkpoint-best-modern-flat-pictogram-illustration-web-129015183.jpg"
+                    alt="solutions" width="20" height="20">Solutions
+            </p>
+            <p id="dis">
+                <img src="https://www.pngitem.com/pimgs/m/570-5705655_wechat-svg-png-icon-free-download-discuss-icon.png"
+                    alt="discuss" width="20" height="20">Discussion
+            </p>
+        <p id="visubmission"> &nbsp;&nbsp;&nbsp;&nbsp;    view submission
+
+            <select name="visubmission" id="visubmission"></select></p>
+         </div>
+    <div class="ques">
+    <div>
+
+        <p class="ques1" class="sub">Best Time to Buy and Sell Stock &#8547;</p>
+        <p class="ques2 ">The Number of Weak characters in the Game</p>
+        <p class="ques3" class="sub">Pacific Atlantic Water Flow</p>
+        <p class="ques4">Arranging coins</p>
+
+        <p class="ques5" class="sub">Clone Graph</p>
+        <p class="ques6">Number of Dice Rolls With Target Sum</p>
+        <p class="ques7" class="sub">course schedule</p>
+        <p class="ques8">Max Area of Island</p>
+        <p class="ques9" class="sub">Number of Dice Rolls With Target Sum</p>
+        <p class="ques10">Binary Trees Cameras</p>
+        <p class="ques11" class="sub">Minimun Path Sum</p>
+        <p class="ques12">Next Permutation</p>
+    </div>
+    <div class="days">
+
+        <p  class="ques1">a day ago</p>
+        
+        
+        <p class="ques2">2 days ago</p>
+     <p class="ques3">2 days ago</p>
+     <p class="ques4"> a month ago</p>
+     <p class="ques5">2 months ago</p>
+     <p class="ques6">2 months ago</p>
+     <p class="ques7">2 months ago</p>
+     <p class="ques8">2 months ago</p>
+     <p class="ques9">3 months ago</p>
+     <p class="ques10">3 months ago</p>
+     <p class="ques11">3 months ago</p>
+        
+        <p class="ques12">3 months ago</p>
+
+    </div>
+    
+    
+</div>
+
+    </div>
+    <!--dashboard end-->
+</body>
+
+</html>
